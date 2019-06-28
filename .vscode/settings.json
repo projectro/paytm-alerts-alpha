@@ -3,8 +3,14 @@
         "codelyzer",
         "devkit",
         "jasminewd",
+        "mutiullah",
+        "ngif",
         "paytm",
+        "samim",
         "tslib",
         "types"
+    ],
+    "cSpell.ignoreWords": [
+        "env"
     ]
 }
