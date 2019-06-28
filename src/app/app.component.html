@@ -1,8 +1,15 @@
 <div class="container-fluid bg-dark">
   <div class="row p-1 align-items-center">
     <div class="col-sm">
-      <div *ngIf="authSuccess">
+      <div class="row">
+        <div>
+          <button (click)="login()">Login with Google</button>
+        </div>
+        <div >
           <img class="img-fluid" src="../assets/img.png" />
+          <p>Hello {{ data.i.user | json }}!</p>
+          <button (click)="logout()">Logout</button>
+        </div>
       </div>
     </div>
     <div class="col-l">
