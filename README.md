@@ -1,3 +1,10 @@
+# LIVE LINK of @master branch
+
+https://officialpaytm.herokuapp.com
+
+# LIVE LINK of @development branch (testing)
+https://d-t-paytm-alerts-alpha.web.app 
+
 # ABOUT THE PROJECT
 
 I am learning Angular and how web technologies work while solving a very big issue around india video game streaming revenue acknowledgement/generation.
