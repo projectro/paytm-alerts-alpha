@@ -1,3 +1,10 @@
+# ABOUT THE PROJECT
+
+I am learning Angular and how web technologies work while solving a very big issue around india video game streaming revenue acknowledgement/generation.
+
+Will be using AOT(Ahead of Time) Complier and Ivy. As the project is open source. I like to experiment.
+The same website is live at https://paytm-alerts-alpha.herokuapp.com based on angular.js.
+
 # PaytmAlertsAlpha
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
