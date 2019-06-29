@@ -1,9 +1,8 @@
-import { Component, Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment.test';
+import { Component } from '@angular/core';
+import { env } from 'src/environments/environment';
 
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 
 export class AppComponent {
-  title: string = environment.name;
+  title: string = env.name;
   data: any;
   name: string;
   dbname: string;
