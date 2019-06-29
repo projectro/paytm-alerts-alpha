@@ -12,16 +12,18 @@ import { Observable } from 'rxjs';
 })
 
 export class AppComponent {
-  title: string;
+  title: string = environment.name;
   data: any;
   name: string;
+  dbname: string;
   constructor(public afAuth: AngularFireAuth) {
+    this.data = this.afAuth.user;
+    this.dbname = this.data;
   }
   login() {
-    this.data = this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
   logout() {
     this.afAuth.auth.signOut();
-    this.data = null;
   }
 }

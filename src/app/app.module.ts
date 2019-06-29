@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthGuardModule, AngularFireAuthGuard } from '@angular/fire/auth-guard';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { environment } from 'src/environments/environment.test';
@@ -21,9 +22,10 @@ import { ViewComponent } from './view/view.component';
     CommonModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthGuardModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AngularFireAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

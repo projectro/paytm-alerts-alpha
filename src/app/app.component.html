@@ -2,14 +2,13 @@
   <div class="row p-1 align-items-center">
     <div class="col-sm">
       <div class="row">
-        <div>
-          <button (click)="login()">Login with Google</button>
-        </div>
-        <div >
-          <img class="img-fluid" src="../assets/img.png" />
-          <p>Hello {{ data.i.user | json }}!</p>
-          <button (click)="logout()">Logout</button>
-        </div>
+        <button *ngIf="afAuth.user | async as user; else showLogin" type="button" class="p-0 btn btn-primary" (click)="logout()">
+            <img class="rounded align-self-center" [src]="user.photoURL" />
+          <p class="float-right m-0 mt-1 p-2">Logout</p>
+        </button>
+        <ng-template #showLogin>
+          <button type="button" class="btn btn-danger" (click)="login()">Login with Google</button>
+        </ng-template>
       </div>
     </div>
     <div class="col-l">
