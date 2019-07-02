@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthGuardModule, AngularFireAuthGuard } from '@angular/fire/auth-guard';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -20,6 +22,7 @@ import { ViewComponent } from './view/view.component';
   imports: [
     BrowserModule,
     CommonModule,
+    HttpClientModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(env.firebaseConfig),
     AngularFireAuthGuardModule,
