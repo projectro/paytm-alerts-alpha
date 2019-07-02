@@ -5,7 +5,7 @@
         <button *ngIf="afAuth.user | async as user; else showLogin" type="button" class="btn btn-primary p-0"
           (click)="logout()">
           <img class="rounded align-self-center" style="padding: 0;" [src]="user.photoURL" />
-          <p class="float-right m-0 mx-2" style="font-size:2vw; padding-top: 1vw;">Logout</p>
+          <p class="float-right font-weight-bold m-0 mx-3" style="font-size:2vw; padding-top: 1vw; letter-spacing: 0.25vw;">Logout</p>
         </button>
         <ng-template #showLogin>
           <button type="button" class="btn btn-danger" (click)="login()"><b>Login with </b><i class="fab fa-google"></i></button>
