@@ -1,23 +1,28 @@
 <div class="container-fluid bg-dark">
-  <div class="row p-1 align-items-center">
-    <div class="col-sm">
-      <div class="row">
-        <button *ngIf="afAuth.user | async as user; else showLogin" type="button" class="p-0 btn btn-primary" (click)="logout()">
-            <img class="rounded align-self-center" [src]="user.photoURL" />
-          <p class="float-right m-0 mt-1 p-2">Logout</p>
+  <div class="row align-items-center">
+    <div class="col-4 col-m-4 col-l-4 col-sm-4">
+      <div class="row mx-2">
+        <button *ngIf="afAuth.user | async as user; else showLogin" type="button" class="btn btn-primary p-0"
+          (click)="logout()">
+          <img class="rounded align-self-center" style="padding: 0;" [src]="user.photoURL" />
+          <p class="float-right m-0 mx-2" style="font-size:2vw; padding-top: 1vw;">Logout</p>
         </button>
         <ng-template #showLogin>
-          <button type="button" class="btn btn-danger" (click)="login()">Login with Google</button>
+          <button type="button" class="btn btn-danger" (click)="login()"><b>Login with </b><i class="fab fa-google"></i></button>
         </ng-template>
       </div>
     </div>
-    <div class="col-l">
-      <div class="row">
-        <h1 class="text-light p-0">{{ title }}</h1>
+    <div class="col-6 col-m-6 col-l-4 col-sm-6">
+      <div class="row align-items-center mr-3">
+        <h1 class="h3 text-light m-0 p-0" style="font-size: 3vw;">{{ title }}</h1>
       </div>
     </div>
-    <div class="col-sm">
-
+    <div class="col-2 col-m-2 col-l-2 col-sm-2">
+      <div class="row pb-1">
+        <h4 class="insta-vertical">INSTAGRAM</h4>
+        <iframe src="https://cdn.lightwidget.com/widgets/46492dccedf350bc8580e63cab1ca685.html" scrolling="no"
+          allowtransparency="true" class="lightwidget-widget" style="margin:-1.9vw 0 -0.17vw 0.1vw;width:100%;border:0;overflow:hidden;"></iframe>
+      </div>
     </div>
   </div>
 </div>

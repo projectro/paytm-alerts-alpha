@@ -1,4 +1,17 @@
 img {
-    height: 50px;
-    width: 50px;
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+}
+.insta-vertical {
+    font: bold 0.78vw Sans-Serif;
+    letter-spacing: 0.25vw;
+    text-transform: uppercase;
+    background: #369;
+    color: #fff;
+    padding: 0.5vw 0.75vw;
+    margin: 0 !important;
+    line-height: 1vw;
+    transform: rotate(90deg);
+    transform-origin: left top 0;
 }

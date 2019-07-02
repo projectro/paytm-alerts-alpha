@@ -11,16 +11,14 @@ import { auth } from 'firebase/app';
 })
 
 export class AppComponent {
-  title: string = env.name;
-  data: any;
-  name: string;
-  dbname: string;
+  title: string;
+  UserStatus: boolean;
+
   constructor(public afAuth: AngularFireAuth) {
-    this.data = this.afAuth.user;
-    this.dbname = this.data;
+    this.title = env.name;
   }
   login() {
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    this.afAuth.auth.signInWithRedirect(new auth.GoogleAuthProvider());
   }
   logout() {
     this.afAuth.auth.signOut();
